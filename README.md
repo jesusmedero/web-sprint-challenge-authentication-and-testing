@@ -31,7 +31,7 @@ Your finished project must include all of the following requirements (further in
 - [ ] A minimum of 2 tests per API endpoint, written inside `api/server.test.js`.
 
 **IMPORTANT Notes:**
-
+  
 - Codegrade is running some tests you cannot see in this repo. Make sure to comply with project instructions to the letter!
 - Do not exceed 2^8 rounds of hashing with `bcryptjs`.
 - If you use environment variables make sure to provide fallbacks in the code (e.g. `process.env.SECRET || "shh"`).
