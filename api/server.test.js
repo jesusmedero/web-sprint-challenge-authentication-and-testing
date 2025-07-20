@@ -2,8 +2,18 @@ const request = require('supertest');
 const server = require('./server');
 const db = require('../data/dbConfig'); 
 
+beforeAll(async () => {
+  await db.migrate.rollback(); 
+  await db.migrate.latest();   
+});
+
 afterEach(async () => {
   await db('users').truncate(); 
+});
+
+
+afterAll(async () => {
+  await db.destroy();
 });
 
 describe('Auth Router - Register', () => {
